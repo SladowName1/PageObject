@@ -11,7 +11,6 @@ public class ProductPage extends MainPage {
     private final static String PRODUCT_ARTICLE = "//span[@class = 'prod-article' and text() ='$']";
     private final String selectedProduct= "//*[@id='bx_3966226736_10205_7e1b8e3524755c391129a9d7e6f2d206']/div";
     private final String selectedProductSecondTest="//*[@id=\"bx_3966226736_10205_362ce596257894d11ab5c1d73d13c755\"]/div";
-    private final String actualSizeSelected = "//div[contains(@class,'bx_size')]//li[contains(@class, 'active')]";
     private final String addToBasketOnSearch ="bx_117848907_10205_buy_link";
     private final String selectedProductCost="22 руб.";
     public final String productOrderId="allSum_FORMATED";
@@ -19,9 +18,6 @@ public class ProductPage extends MainPage {
     public final String maxCostFilter="35";
     public ProductPage(WebDriver driver){super(driver);}
 
-    public String getProductArticle(String articleProduct){
-        return waitForElementLocatedBy(driver,By.xpath(PRODUCT_ARTICLE),waitTimeSeconds).getText();
-    }
 
     public ProductPage selectProduct()
     {
